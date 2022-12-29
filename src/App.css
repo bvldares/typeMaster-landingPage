@@ -1,0 +1,421 @@
+:root{
+  font-family: 'Barlow', sans-serif;
+
+  /*COLORS*/
+  --orange : #f16718;
+  --light-orange: #ff9B62;
+  --blue: #162542;
+  --light-blue: #7B8BAD;
+  --grey: #E8EFF2;
+  --white: #FFF;
+
+
+  /*TYPOGRAPHY*/
+
+  /*Weight*/
+  --weigth-light:300;
+  --weigth-normal:400;
+  --weigth-medium: 500;
+  --weigth-bold:700;
+  --weigth-boldest:900;
+
+  /*Sizes*/
+  
+  /*MOBILE*/
+  --h1-mobile:3rem;
+
+  /*Desktop*/
+  --h1-tablet:3.5rem;
+
+  /*SHARED*/
+  --btn-shared: 1rem;
+  --h2-shared: 2rem;
+  --h3-shared: 1.5rem;
+  --body-shared:1rem; 
+
+  /*Line heigth*/
+  --h1-line:3.5rem;
+  --h2-line:1.875rem;
+  --h3-line:1.5rem;
+  --body-line: 1.625rem;
+}
+
+.wrapper{
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+
+.link{
+  padding:.75em .875em;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: var(--weigth-bold);
+}
+
+.header-preorder-link{
+  background-color: var(--grey);
+  color: var(--blue);
+}
+
+.header-preorder-link:hover,
+.header-preorder-link:focus{
+  background-color: var(--blue);
+  color: var(--white);
+  transition: 1000ms;
+}
+
+/*INTRO SECTION*/
+
+.intro-description{
+  padding: 0 1.5em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4em;
+}
+
+.intro-title{
+  font-size: var(--h1-mobile);
+  line-height: var(--h1-line);
+  text-transform: uppercase;
+  font-weight: var(--weigth-boldest);
+  color: var(--blue);
+}
+
+.intro-body{
+  color: var(--light-blue);
+  margin:2rem 0;
+}
+
+.intro-preorder{
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.intro-preorder-link{
+  background-color: var(--orange);
+  color: var(--white);
+  margin-right:2em ;
+}
+
+.intro-preorder-link:hover,
+.intro-preorder-link:active{
+  background-color: var(--light-orange);
+  transition: 1000ms;
+}
+
+.intro-release{
+  text-transform: uppercase;
+  font-weight: var(--weigth-medium);
+  color: var(--light-blue);
+}
+
+.intro-img{
+  content: url("./assets/mobile/image-keyboard.jpg");
+  padding-left: 1.5em;
+  padding-bottom: 1em;
+  border-radius: 15% 0 0 15%;
+}
+
+
+
+/*MAIN SECTION*/
+main{
+  margin-top: .5em;
+  
+}
+
+main p {
+  max-width: 80%;
+}
+
+.specs-intro{
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(120px,1fr) minmax(220px,2fr);
+  grid-template-rows: minmax(193px,480px), 110px;
+  row-gap: 75px;
+  
+}
+
+.specs-intro-orange-img{
+  content: url("./assets/mobile/image-phone-and-keyboard.jpg");
+  grid-row: 1;
+  grid-column: 1;
+  position: relative;
+  right: 1.5rem;
+  border-radius: 20px;
+}
+
+.specs-intro-neutral-img{
+  content: url("./assets/mobile/image-glass-and-keyboard.jpg");
+  grid-row: 1;
+  grid-column: 2;
+  padding-right: 1.5rem;
+  min-height: 100%;
+  border-radius: 20px;
+  
+  object-position: left;
+}
+
+.specs-intro-description{
+  grid-row: 2;
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.specs-intro-title{
+  text-transform: uppercase;
+  font-weight: var(--weigth-boldest);
+  line-height: var(--h2-line);
+  font-size: var(--h2-shared);
+  margin-bottom: 1.5rem;
+  color: var(--blue);
+}
+
+.specs-intro-body{
+  color: var(--light-blue);
+}
+
+.specs,
+.spec{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.specs{
+  margin: 6em 0;
+}
+
+.spec{
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.spec-logo{
+  background-color: var(--orange);
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  padding: 1em;
+  border-radius: 16px;
+  margin: 3rem 0;
+}
+
+.spec-title{
+  margin-bottom: 1.5rem;
+  color: var(--blue);
+  font-weight: var(--weigth-boldest);
+}
+
+.spec-description{
+  color: var(--light-blue);
+}
+
+footer{
+  margin: 0 auto;
+  padding:3rem;
+  color: var(--light-blue);
+}
+
+span{
+  font-weight: var(--weigth-bold);
+}
+
+
+
+@media(min-width:450px){
+  .link{
+    padding:1em 1.625em;
+  }
+}
+
+@media(min-width:700px){
+
+  header{
+    padding: 2.5rem;
+  }
+
+  .intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .intro-description{
+    padding-left: 2.5rem;
+    padding-right: 0;
+  }
+
+  .intro-title{
+    font-size: var(--h1-tablet);
+  }
+
+  .intro-body{
+    margin-bottom: 2.5rem;
+    max-width: 380px;
+  }
+
+  .intro-img{
+    width: 300px;
+    height: 430px;
+    object-fit: cover;
+    object-position: left;
+    padding-left: 0;
+    content: url("./assets/tablet/image-keyboard.jpg");
+  }
+
+  .specs-intro{
+    padding: 0 2.5rem;
+    column-gap: 1.875rem;
+  }
+
+  .specs-intro-orange-img{
+    content: url("./assets/tablet/image-phone-and-keyboard.jpg");
+    position: static;
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+  .specs-intro-neutral-img{
+    content: url("./assets/tablet/image-glass-and-keyboard.jpg");
+    padding: 0;
+    object-fit: cover;
+  }
+
+  .specs-intro-description{
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+
+  .specs-intro-title{
+    margin-bottom: 0;
+    margin-right: 2em;
+  }
+
+  .specs-intro-body{
+    max-width: 450px;
+  }
+
+  .specs{
+    padding: 0 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  .spec{
+    align-items: flex-start;
+    text-align: left;
+  }
+
+}
+
+@media(min-width:900px){
+  .intro{
+    padding: 2.5rem;
+    gap: 1em;
+  }
+
+  .intro-description{
+    padding: 0;
+  }
+
+  .intro-img{
+    content: url("./assets/desktop/image-keyboard.jpg");
+    width:  50%;
+    height: 480px;
+    object-position: left bottom;
+    border-radius: 2em 2em 2em 2em;
+  }
+
+  
+
+  .specs-intro{
+    display: grid;
+    grid-template-columns: 1fr 2fr minmax(200px, 250px)
+  }
+
+  .specs-intro-orange-img{
+    content: url("./assets/desktop/image-phone-and-keyboard.jpg");
+  }
+
+  .specs-intro-neutral-img{
+    content: url("./assets/desktop/image-glass-and-keyboard.jpg");
+   
+  }
+
+  .specs-intro-description{
+    padding: 1em;
+    grid-row: 1;
+    grid-column: 3;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .specs-intro-title{
+    align-self: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .specs{
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .spec:first-child,
+  .spec:nth-of-type(3){
+    padding-bottom: 3em;
+  }
+
+}
+
+@media(min-width:1200px){
+
+  body{
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::after{
+    position: absolute;
+    content: url("./assets/shared/pattern-square.svg");
+    left: 93%;
+    top:8.5%;
+  }
+  
+  body::before{
+    position: absolute;
+    content: url("./assets/shared/pattern-square.svg");
+    right: 90%;
+    top:49%;
+    z-index: -1;
+  }
+
+}
+
+
+
+
+
+
+
+
+
